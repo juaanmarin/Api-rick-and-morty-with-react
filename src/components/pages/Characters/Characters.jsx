@@ -49,7 +49,9 @@ export const Characters = () => {
           <InputBuscar clase="input" event={search} description="buscar"/>
         </div>
         <div className='cards'>
-          <Card characters={characters} ></Card>
+          {characters.map((item, index) => (
+            <Card key={index} image={item.image} name={item.name}></Card>
+          ))}
         </div>
        
       </section>

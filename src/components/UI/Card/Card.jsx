@@ -1,18 +1,14 @@
 import React from 'react'
 
-export const Card = ({characters=[]}) => {
+export const Card = ({image, name}) => {
   return (
       <>
-        {characters.map((item, index) => (
-          <div key={index} className="card">
+          <div className="card">
                 <div className="card-title">
-                    <h2>{item.name}</h2>
+                    <h2>{name}</h2>
                 </div>
-                <img className="card-img" src={item.image} alt="character" />
-          </div>
-        ))}
-      
+                <img className="card-img" src={image} alt="character" />
+          </div>   
       </>
-    
   )
 }

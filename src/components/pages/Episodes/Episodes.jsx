@@ -1,4 +1,5 @@
 import React from 'react'
+import { Footer } from '../../layout/Footer/Footer'
 import { Header } from '../../layout/Header/Header'
 import { Nav } from '../../layout/Nav/Nav'
 import { Title } from '../../UI/Title/Title'
@@ -18,6 +19,9 @@ export const Episodes = () => {
     <section className='Home-section'>
 
     </section>
+    <footer>
+        <Footer></Footer>
+      </footer>
   </>
   )
 }
