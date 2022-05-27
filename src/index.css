@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+.App{
+  display:flex;
+  flex-direction: column;
+}
+.Home-header {
+  background-color: #282c34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: white;
+}
+.App-logo {
+  height: 100px;
+  pointer-events: none;
+  margin-right: 70px;
+}
+.Home-Nav{
+  display: flex;
+  gap: 50px;
+  border: solid 2px whitesmoke;
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Home-Nav a{
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(255, 254, 254);
+}
+.Home-Nav a:hover{
+  font-size: 30px;
+}
+.Home-section{
+  padding: 40px;
+  height: 100%;
+  background:linear-gradient(to right, rgb(32, 203, 41), yellow);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.search{
+  display: flex;
+  justify-content: center;
+}
+.input{
+  width: 400px;
+  height: 39px;
+  font-size: 23px;
+  text-align: center;
+  border-radius: 20px;
+}
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 400px;
+  height: 400px;
+}
+.card img{
+  width: 350px;
+}
+
+
+footer{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+}
+footer img{
+  width: 50px;
+  height: 50px;
+}
+.icons{
+  display: flex;
+  gap: 17px;
+}
+.contact{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
