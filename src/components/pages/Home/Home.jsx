@@ -4,6 +4,7 @@ import { Footer } from '../../layout/Footer/Footer'
 import { Nav } from '../../layout/Nav/Nav'
 import { Card } from '../../UI/Card/Card'
 import { Title } from '../../UI/Title/Title'
+import { ImageUI } from '../../UI/ImageUI/ImageUI'
 
 export const Home = () => {
 
@@ -46,7 +47,11 @@ export const Home = () => {
       <section className='Home-section'>
         <div className='cards'>
         {characters.map((item, index) => (
-          <Card key={index} image={item.image} name={item.name}></Card>
+          <div className='card'key={index}>
+            <Card txtName="Name:" name={item.name}></Card>
+            <ImageUI image={item.image}></ImageUI>
+          </div>
+
         ))}
         </div>
       </section>

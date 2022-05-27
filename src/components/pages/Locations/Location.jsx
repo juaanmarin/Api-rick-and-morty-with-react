@@ -3,6 +3,7 @@ import { Footer } from '../../layout/Footer/Footer'
 import { Header } from '../../layout/Header/Header'
 import { Nav } from '../../layout/Nav/Nav'
 import { Card } from '../../UI/Card/Card'
+// import { ImageUI } from '../../UI/ImageUI/ImageUI'
 import { Title } from '../../UI/Title/Title'
 
 export const Location = () => {
@@ -10,21 +11,31 @@ export const Location = () => {
   const url="https://rickandmortyapi.com/api/location"
 
   const [locations, setLocations]= useState([]);
+  const [character, setCharacter]= useState([]);
+
 
   const fetchApi=()=>{
     fetch(url)
     .then(response=>response.json())
-    .then(data=> dataCollector(data))
+    .then(data=> setLocations(data.results))
   }
 
-  function dataCollector(data){
+  function dataCollector(){
+    console.log(character)
+    console.log("####################");
     
-    setLocations(data.results)
+    
   }
 
   useEffect(() => {
     fetchApi();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  useEffect(() => {
+    dataCollector()
+  }, [character])
+  
 
   return (
     <>
@@ -39,9 +50,15 @@ export const Location = () => {
 
     <section className='Home-section'>
       <div className='cards'>
-        {locations.map((item, index) => (
-          <Card key={index}  name={item.name}></Card>
-        ))}
+      {locations.map((item, index) => (
+        
+          <div className='card'key={index}>
+            <Card txtName='Name: ' name={item.name} txtType='Type: ' type={item.type} txtDimens='Dimension:' dimension={item.dimension}></Card>
+            {setCharacter(item.residents)}
+            {/* <ImageUI image={character}></ImageUI> */}
+          </div>
+
+        ))} 
       </div>
     </section>
 

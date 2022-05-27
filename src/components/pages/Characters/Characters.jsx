@@ -5,14 +5,14 @@ import { Nav } from '../../layout/Nav/Nav'
 import { Card } from '../../UI/Card/Card'
 import { Title } from '../../UI/Title/Title'
 import { InputBuscar } from '../../UI/InputBuscar/InputBuscar'
-
+import { ImageUI } from '../../UI/ImageUI/ImageUI'
 export const Characters = () => {
 
   const url="https://rickandmortyapi.com/api/character";
   
   const input=document.getElementById("input");
 
-  const [characters, setCharacters]= useState([]);
+  const [characters=[], setCharacters]= useState([]);
 
   const fetchApi=(url)=>{
     fetch(url)
@@ -49,9 +49,13 @@ export const Characters = () => {
           <InputBuscar clase="input" event={search} description="buscar"/>
         </div>
         <div className='cards'>
-          {characters.map((item, index) => (
-            <Card key={index} image={item.image} name={item.name}></Card>
-          ))}
+        {characters.map((item, index) => (
+          <div className='card'key={index}>
+            <Card txtName="name" name={item.name}></Card>
+            <ImageUI image={item.image}></ImageUI>
+          </div>
+
+        ))}
         </div>
        
       </section>

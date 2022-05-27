@@ -1,14 +1,14 @@
 import React from 'react'
 
-export const Card = ({image, name}) => {
+export const Card = ({txtName, txtType, txtDimens, name, type, dimension}) => {
   return (
       <>
-          <div className="card">
-                <div className="card-title">
-                    <h2>{name}</h2>
-                </div>
-                <img className="card-img" src={image} alt="character" />
-          </div>   
+        <div className="card-title">
+            <h2>{txtName} {name}</h2>
+            <h3>{txtType} {type}</h3>
+            <h3>{txtDimens} {dimension}</h3>    
+        </div>
+                 
       </>
   )
 }
