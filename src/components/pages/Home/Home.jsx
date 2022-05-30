@@ -5,6 +5,7 @@ import { Nav } from '../../layout/Nav/Nav'
 import { Card } from '../../UI/Card/Card'
 import { Title } from '../../UI/Title/Title'
 import { ImageUI } from '../../UI/ImageUI/ImageUI'
+import { Buuton } from '../../UI/Button/Buuton'
 
 export const Home = () => {
 
@@ -54,6 +55,11 @@ export const Home = () => {
 
         ))}
         </div>
+        <div className='buttons'>
+          <Buuton nameClass="btn" text="< atras"></Buuton>
+          <Buuton nameClass="btn" text="adelante >"></Buuton>
+        </div>
+ 
       </section>
 
       <footer>

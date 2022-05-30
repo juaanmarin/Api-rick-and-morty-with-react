@@ -51,7 +51,7 @@ export const Characters = () => {
         <div className='cards'>
         {characters.map((item, index) => (
           <div className='card'key={index}>
-            <Card txtName="name" name={item.name}></Card>
+            <Card txtName="name:" name={item.name}></Card>
             <ImageUI image={item.image}></ImageUI>
           </div>
 

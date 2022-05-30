@@ -44,6 +44,7 @@
   background:linear-gradient(to right, rgb(32, 203, 41), yellow);
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 .search{
@@ -81,7 +82,21 @@
 .card img:hover{
   width: 360px;
 }
-
+.buttons{
+  display: flex;
+  gap: 30px;
+}
+.buttons button{
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.buttons button:hover{
+  width: 110px;
+  height: 45px;
+  background-color: yellow;
+}
 footer{
   width: 100%;
   height: 100px;
