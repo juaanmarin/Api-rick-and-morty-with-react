@@ -48,10 +48,18 @@ export const Home = () => {
       <section className='Home-section'>
         <div className='cards'>
         {characters.map((item, index) => (
-          <div className='card'key={index}>
-            <Card txtName="Name:" name={item.name}></Card>
-            <ImageUI image={item.image}></ImageUI>
+
+          <div className="card" key={index}>
+            <div className="flip-box-inner">
+                <div className="flip-box-front">
+                  <ImageUI image={item.image}></ImageUI>
+                </div>
+                <div className="flip-box-back">
+                  <Card txtName="Name:" name={item.name}></Card>
+                </div>
+            </div>
           </div>
+         
 
         ))}
         </div>
